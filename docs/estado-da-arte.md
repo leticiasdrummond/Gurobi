@@ -89,6 +89,23 @@ A metodologia evolui em **modelos incrementais**, inspirados nos exemplos de *Ba
 - P_grid,t = 0 em janelas de falha
 - avaliação de autonomia e atendimento mínimo
 
+### Diagrama do fluxo do projeto
+
+```mermaid
+flowchart TD
+  A["Visão de negócio<br/>(modelo de atendimento, receitas, nível de serviço)"] --> B["Requisitos e hipóteses"]
+  B --> C["Análise técnica<br/>(rede, PV, BESS, confiabilidade)"]
+  B --> D["Análise econômica<br/>(CAPEX, OPEX, tarifa, custo de ENS)"]
+  C --> E["Arquivos de referência<br/>- docs/estado-da-arte.md<br/>- battery_scheduling.ipynb<br/>- COMPLEXO - jução Let.ipynb (branch Marika-K-patch-1)"]
+  D --> E
+  E --> F["Parametrização do modelo<br/>P_load,t · P_pv,t · P_grid,max<br/>SOC_min/max · η_c/η_d · tarifas · falhas"]
+  F --> G["Modelagem incremental<br/>Modelos 1–4"]
+  G --> H["Otimização no Gurobi"]
+  H --> I["Resultados e métricas<br/>ENS · taxa de atendimento · autonomia"]
+  I --> J["Decisões e ajustes<br/>dimensionamento e operação"]
+  J --> B
+```
+
 ---
 
 ## 4. Métricas de avaliação técnica
