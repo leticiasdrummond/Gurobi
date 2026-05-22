@@ -166,8 +166,8 @@ Este documento é um ponto de partida para organizar a revisão de literatura e 
 - histórico de falhas,
 - e dimensionamento preliminar do BESS.
 
-Caso deseje, posso:
-- adicionar figuras de fluxograma do modelo
+Complementos
+Figuras de fluxograma do modelo
 
 ```mermaid
 flowchart TD
@@ -182,6 +182,7 @@ flowchart TD
   H --> I["Resultados e métricas"]
   I --> J["Decisões e ajustes"]
   J --> B
+```
+
 ---
-- 
-- ou preparar os modelos matemáticos em LaTeX.
+
