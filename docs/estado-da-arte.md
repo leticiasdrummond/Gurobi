@@ -16,7 +16,20 @@ A otimização matemática (LP/MILP/MIQP) é a abordagem mais apropriada para li
 
 ---
 
-## 2. Estado da arte (organizado por eixos)
+## 2. Estado da arte (organizado por eixos) 
+
+flowchart TD
+  A["Visão de negócio"] --> B["Requisitos e hipóteses"]
+  B --> C["Análise técnica"]
+  B --> D["Análise econômica"]
+  C --> E["Arquivos de referência"]
+  D --> E
+  E --> F["Parametrização do modelo"]
+  F --> G["Modelagem incremental"]
+  G --> H["Otimização no Gurobi"]
+  H --> I["Resultados e métricas"]
+  I --> J["Decisões e ajustes"]
+  J --> B
 
 ### 2.1 Modelos de microrredes e eletromobilidade
 A literatura sobre microrredes para EV charging foca em:
